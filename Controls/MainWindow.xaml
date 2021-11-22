@@ -12,5 +12,6 @@
         <Button Click="ShowGridWithPosition" Height="auto" Width="150" Margin="5">Grid with pos.</Button>
         <Button Click="ShowStackPanel" Height="auto" Width="150" Margin="5">StackPanel</Button>
         <Button Click="ShowGroupName" Height="auto" Width="150" Margin="5">Group name</Button>
+        <Button Click="ShowGroupBox" Height="auto" Width="150" Margin="5">Group box</Button>
     </StackPanel>
 </Window>

@@ -54,5 +54,11 @@ namespace Controls
             GroupNameWithStackPanel groupNameWithStackPanel = new GroupNameWithStackPanel();            
             groupNameWithStackPanel.Show();
         }
+
+        private void ShowGroupBox(object sender, RoutedEventArgs e)
+        {
+            GroupBoxDemo groupBoxDemo = new GroupBoxDemo();
+            groupBoxDemo.Show();
+        }
     }
 }
