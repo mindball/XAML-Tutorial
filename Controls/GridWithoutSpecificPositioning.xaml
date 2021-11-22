@@ -1,0 +1,18 @@
+﻿<Window x:Class="Controls.GridWithoutSpecificPositioning"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controls"
+        mc:Ignorable="d"
+        Title="GridWithoutSpecificPositioning" Height="450" Width="229">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="659*"/>
+            <ColumnDefinition Width="141*"/>
+        </Grid.ColumnDefinitions>
+        <RadioButton Grid.ColumnSpan="2">Test1asd</RadioButton>
+        <RadioButton Grid.ColumnSpan="2">Test222</RadioButton>
+        <RadioButton Grid.ColumnSpan="2">Test33</RadioButton>
+    </Grid>
+</Window>

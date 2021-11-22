@@ -1,0 +1,16 @@
+﻿<Window x:Class="Controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="316">
+    <StackPanel>
+        <Button Click="ShowToogleButton" Height="auto" Width="150" Margin="5">Toogle Button</Button>
+        <Button Click="ShowGridWithoutPosition" Height="auto" Width="150" Margin="5">Grid without pos.</Button>
+        <Button Click="ShowGridWithPosition" Height="auto" Width="150" Margin="5">Grid with pos.</Button>
+        <Button Click="ShowStackPanel" Height="auto" Width="150" Margin="5">StackPanel</Button>
+        <Button Click="ShowGroupName" Height="auto" Width="150" Margin="5">Group name</Button>
+    </StackPanel>
+</Window>
