@@ -1,4 +1,5 @@
 ﻿using DataBinding.IntellitectDemo;
+using DataBinding.IValueConverterDemo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,24 @@ namespace DataBinding
         private void Intelliteck_Click(object sender, RoutedEventArgs e)
         {
             Window1 demo = new Window1();
+            demo.Show();
+        }
+
+        private void Converter_Click(object sender, RoutedEventArgs e)
+        {
+            ValueConvererDemo demo = new ValueConvererDemo();
+            demo.Show();
+        }
+
+        private void SimpleConverter_Click(object sender, RoutedEventArgs e)
+        {
+            SimpleConvertedDemo demo = new SimpleConvertedDemo();
+            demo.Show();
+        }
+
+        private void TextContainsNumbersToBrush_Click(object sender, RoutedEventArgs e)
+        {
+            TextContainsNumbersToBrush demo = new TextContainsNumbersToBrush();
             demo.Show();
         }
     }

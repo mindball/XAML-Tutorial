@@ -14,5 +14,11 @@
         <Button x:Name="NotifyPropertyChangedBtn" Height = "40" Width = "175" Click="NotifyPropertyChanged_Click"  Content = "Notify Property Changed"/>
         <Separator></Separator>
         <Button x:Name="IntellitectDemo" Height = "40" Width = "176" Click="Intelliteck_Click"  Content = "IntellitectDemo"/>
+        <Separator></Separator>
+        <Button x:Name="IValueConverterDemo" Height = "40" Width = "176" Click="Converter_Click"  Content = "IValueConverter Demo"/>
+        <Separator></Separator>
+        <Button x:Name="IValueSimpleConverterDemo" Height = "40" Width = "176" Click="SimpleConverter_Click"  Content = "IValueSimpleConverter Demo"/>
+        <Separator></Separator>
+        <Button x:Name="TextContainsNumbersToBrushDemo" Height = "40" Width = "176" Click="TextContainsNumbersToBrush_Click"  Content = "TextContainsNumbersToBrush Demo"/>
     </StackPanel>
 </Window>

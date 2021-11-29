@@ -76,3 +76,13 @@ It can be bound in XAML as well.
 ```
 Всяка колекция, която искаме да се наблюдава за промяна, я wrap-ваме в ObservableCollection
 ```
+
+## IValueConverter
+```c#
+public object Convert(object value, Type targetType, object parameter, CultureInfo culture) от кода към UI
+public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) от UI към кода
+```
+### Used cases
+> You have a numeric value but you want to show zero values in one way and positive numbers in another way
+> You want to check a CheckBox based on a value, but the value is a string like "yes" or "no" instead of a Boolean value
+> You have a file size in bytes but you wish to show it as bytes, kilobytes, megabytes or gigabytes based on how big it is

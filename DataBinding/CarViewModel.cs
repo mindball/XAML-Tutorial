@@ -13,6 +13,7 @@ namespace DataBinding
         private string manufacture;
         private string model;
         private decimal yearOfDrived;
+        private DateTime created;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -21,16 +22,17 @@ namespace DataBinding
             this.Manufacture = "audi";
             this.Model = "S8";
             this.YearsOfDrived = 1232222;
+            this.Created = DateTime.Now;
         }
 
-        public string Manufacture 
-        { 
+        public string Manufacture
+        {
             get
             {
                 return this.manufacture;
             }
             set
-            { 
+            {
                 this.manufacture = value;
                 OnProperyChanged();
             }
@@ -64,16 +66,26 @@ namespace DataBinding
 
         }
 
-
-        public void OnProperyChanged([CallerMemberName]string propName = "")
+        public DateTime Created
         {
-            if(PropertyChanged != null)
+            get
+            {
+                return this.created;
+            }
+            set
+            {
+                this.created = value;
+                 OnProperyChanged();
+            }
+
+        }
+        public void OnProperyChanged([CallerMemberName] string propName = "")
+        {
+            if (PropertyChanged != null)
             {
                 var propertyChangedEventArgs = new PropertyChangedEventArgs(propName);
                 PropertyChanged(this, propertyChangedEventArgs);
             }
-            
-
         }
     }
 }
