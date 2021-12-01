@@ -1,5 +1,6 @@
 ﻿using DataBinding.IntellitectDemo;
 using DataBinding.IValueConverterDemo;
+using DataBinding.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,6 +67,12 @@ namespace DataBinding
         private void TextContainsNumbersToBrush_Click(object sender, RoutedEventArgs e)
         {
             TextContainsNumbersToBrush demo = new TextContainsNumbersToBrush();
+            demo.Show();
+        }
+
+        private void Validation_Click(object sender, RoutedEventArgs e)
+        {
+            UserNameInput demo = new UserNameInput();
             demo.Show();
         }
     }

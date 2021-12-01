@@ -20,5 +20,7 @@
         <Button x:Name="IValueSimpleConverterDemo" Height = "40" Width = "176" Click="SimpleConverter_Click"  Content = "IValueSimpleConverter Demo"/>
         <Separator></Separator>
         <Button x:Name="TextContainsNumbersToBrushDemo" Height = "40" Width = "176" Click="TextContainsNumbersToBrush_Click"  Content = "TextContainsNumbersToBrush Demo"/>
+        <Separator></Separator>
+        <Button x:Name="ValidationDemo" Height = "40" Width = "176" Click="Validation_Click"  Content = "Validation"/>
     </StackPanel>
 </Window>
