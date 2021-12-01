@@ -22,5 +22,7 @@
         <Button x:Name="TextContainsNumbersToBrushDemo" Height = "40" Width = "176" Click="TextContainsNumbersToBrush_Click"  Content = "TextContainsNumbersToBrush Demo"/>
         <Separator></Separator>
         <Button x:Name="ValidationDemo" Height = "40" Width = "176" Click="Validation_Click"  Content = "Validation"/>
+        <Separator></Separator>
+        <Button x:Name="DataContextDemo" Height = "40" Width = "176" Click="DataContext_Click"  Content = "DataContext bind"/>
     </StackPanel>
 </Window>

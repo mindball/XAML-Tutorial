@@ -1,4 +1,5 @@
-﻿using DataBinding.IntellitectDemo;
+﻿using DataBinding.DataContextDemo;
+using DataBinding.IntellitectDemo;
 using DataBinding.IValueConverterDemo;
 using DataBinding.Validations;
 using System;
@@ -73,6 +74,12 @@ namespace DataBinding
         private void Validation_Click(object sender, RoutedEventArgs e)
         {
             UserNameInput demo = new UserNameInput();
+            demo.Show();
+        }
+
+        private void DataContext_Click(object sender, RoutedEventArgs e)
+        {
+            DataContextDemoWPF demo = new DataContextDemoWPF();
             demo.Show();
         }
     }
