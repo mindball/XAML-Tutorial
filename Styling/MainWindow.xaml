@@ -1,0 +1,45 @@
+﻿<Window x:Class="Styling.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Styling"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="479" Width="325">
+    <Window.Resources>        
+        <Style x:Key="CustomStyleButton" TargetType="Button">
+            <Setter Property="Width">
+                <Setter.Value>
+                    120
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Height" Value="20">
+            </Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width">
+                <Setter.Value>
+                    150
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Height" Value="30">
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key = "brushResourceColorBlue" Color = "Blue" />
+        <SolidColorBrush x:Key = "brushResourceCustomColor" Color = "Red"/>
+        <!--<ResourceDictionary Source="Dictionary1.xaml">           
+        </ResourceDictionary>-->
+        <Style x:Key="greeting" TargetType="TextBlock">
+            <Setter Property="Text" Value="Hello world"></Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Button Style="{StaticResource CustomStyleButton}">Im the button</Button>
+        <Button Margin="5">Im the asd</Button>
+        <Rectangle x:Name="firstRect" Width="120" Height="35" Margin="5" Fill="{StaticResource brushResourceColorBlue}"></Rectangle>
+        <Rectangle x:Name="secondRect" Width="120" Height="35" Margin="5" Fill="{DynamicResource brushResourceColorBlue}"></Rectangle>
+        <Button x:Name="changeColor" Click="ChangeColor_Click">Change rectangle color</Button>
+        <!--<TextBlock Foreground="{StaticResource brush}" Text="asd" VerticalAlignment="Center" />-->
+        <Button Margin="5" Click="Trigers_Click">Trigers</Button>
+    </StackPanel>
+</Window>
