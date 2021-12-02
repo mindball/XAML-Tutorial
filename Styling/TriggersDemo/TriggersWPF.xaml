@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="TriggersWPF" Height="446" Width="367">
     <Window.Resources>
-        <Style TargetType="Button">
+        <Style x:Key="TriggerStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Background" Value="Blue"></Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Width" Value="200"></Setter>
-                    <Setter Property="Height" Value="80"></Setter>
-                    <Setter Property="FontSize" Value="30"></Setter>
+                    <Setter Property="Foreground" Value="Red"></Setter>                    
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
     <StackPanel>
-        <Button Margin="5">Hover me!</Button>
+        <Button Margin="5" Style="{StaticResource TriggerStyle}">Hover me!</Button>
     </StackPanel>
 </Window>

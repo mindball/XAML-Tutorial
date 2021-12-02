@@ -41,5 +41,7 @@
         <Button x:Name="changeColor" Click="ChangeColor_Click">Change rectangle color</Button>
         <!--<TextBlock Foreground="{StaticResource brush}" Text="asd" VerticalAlignment="Center" />-->
         <Button Margin="5" Click="Trigers_Click">Trigers</Button>
+        <Button Margin="5" Click="EventTrigers_Click">Event trigers</Button>
+        <Button Margin="5" Click="DataTrigger_Click">Data trigers</Button>
     </StackPanel>
 </Window>

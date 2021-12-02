@@ -1,0 +1,32 @@
+﻿<Window x:Class="Styling.DataTriggersDemo.DataTriggersWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Styling.DataTriggersDemo"
+        mc:Ignorable="d"
+        Title="DataTriggersWPF" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=CheckBox, Path=IsChecked}" Value="true">
+                    <Setter Property="TextBlock.Foreground" Value="Yellow"></Setter>
+                    <Setter Property="TextBlock.Background" Value="Blue"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="RedButton" TargetType="Button">
+            <Style.Triggers>
+                <DataTrigger Value="True" Binding="{Binding Path=IsRed}">
+                    <Setter Property="Background" Value="Red"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <CheckBox x:Name="CheckBox" Content="Change color" Margin="20" />
+        <TextBlock x:Name="TextBlock" VerticalAlignment="Center" Text="Event Trigger" FontSize="24" Margin="20"></TextBlock>
+        <Button Click="IsRed_Click" x:Name="IsRed">Is Red</Button>
+        <Button Style="{StaticResource RedButton}">Helo</Button>
+    </StackPanel>
+</Window>

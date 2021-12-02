@@ -1,4 +1,6 @@
-﻿using Styling.TriggersDemo;
+﻿using Styling.DataTriggersDemo;
+using Styling.EventTrigersDemo;
+using Styling.TriggersDemo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +38,18 @@ namespace Styling
         {
             TriggersWPF tr = new TriggersWPF();
             tr.Show();
+        }
+
+        private void EventTrigers_Click(object sender, RoutedEventArgs e)
+        {
+            EventTriggersWPF et = new EventTriggersWPF();
+            et.Show();
+        }
+
+        private void DataTrigger_Click(object sender, RoutedEventArgs e)
+        {
+            DataTriggersWPF dt = new DataTriggersWPF();
+            dt.Show();
         }
     }
 }
