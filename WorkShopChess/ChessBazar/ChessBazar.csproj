@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
     </Reference>
@@ -74,10 +77,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bootstraper.cs" />
     <Compile Include="ViewModels\BaseNotifyPropertyChanged.cs" />
+    <Compile Include="ViewModels\ChessViewGridModel.cs" />
     <Compile Include="ViewModels\GrandMasterAddViewModel.cs" />
     <Compile Include="ViewModels\GrandMasterEditViewModel.cs" />
     <Compile Include="ViewModels\GrandMasterViewModel.cs" />
+    <Compile Include="Views\ChessGridView.xaml.cs">
+      <DependentUpon>ChessGridView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\GrandMasterAddView.xaml.cs">
       <DependentUpon>GrandMasterAddView.xaml</DependentUpon>
     </Compile>
@@ -99,6 +107,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ChessGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\GrandMasterAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +156,10 @@
       <Project>{18c9c981-ae67-412a-9f76-90f7dbcf3111}</Project>
       <Name>ChessBazar.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
