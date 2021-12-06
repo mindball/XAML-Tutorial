@@ -4,11 +4,51 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ChessBazar.Views"
+      xmlns:controls="clr-namespace:ChessBazar.Controls"
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ChessGridView">
 
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding InitCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
-        
+        <ItemsControl Margin="10" Name="SquaresContainer" ItemsSource="{Binding Squares}">
+            <ItemsControl.Template>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </ItemsControl.Template>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Width="600" Height="600" Rows="8" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Rectangle>
+                            <Rectangle.Style>
+                                <Style TargetType="Rectangle">
+                                    <Setter Property="Fill" Value="#b58863"></Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsWhite}" Value="True">
+                                            <Setter Property="Fill" Value="#f0d9b5"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Rectangle.Style>
+                        </Rectangle>
+                        <controls:ChessFigureView Figure="{Binding Figure}"
+                              DragInitEvent="{Binding DataContext.DragInitCommand, ElementName=SquaresContainer}"
+                              DragPushEvent="{Binding DataContext.DragPushCommand, ElementName=SquaresContainer}">
+                        </controls:ChessFigureView>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Page>

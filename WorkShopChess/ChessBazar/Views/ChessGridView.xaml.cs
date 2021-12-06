@@ -12,7 +12,7 @@ namespace ChessBazar.Views
         public ChessGridView()
         {            
             InitializeComponent();
-            this.DataContext = Bootstraper.Container.Resolve<ChessViewGridModel>();
+            this.DataContext = Bootstraper.Container.Resolve<ChessGridViewModel>();
         }
     }
 }

@@ -5,6 +5,7 @@ using ChessBazar.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,9 +18,19 @@ namespace ChessBazar
         public static void Init()
         {
             var builder = new ContainerBuilder();
+            var currentAssembly = Assembly.GetExecutingAssembly();
 
-            builder.RegisterType<ChessViewGridModel>().AsSelf();
-            builder.RegisterType<IBoardGeneratorService>().As<BoardGeneratorService>();
+            //builder.RegisterType<ChessGridViewModel>().AsSelf();
+
+            builder.RegisterAssemblyTypes(currentAssembly)
+                .Where(t => t.Name.EndsWith("ViewModel"))
+                .AsSelf();
+
+            //Register all services with interfaces
+            builder.RegisterAssemblyTypes(currentAssembly)
+                .Where(t => t.Name.EndsWith("Service"))
+                .AsImplementedInterfaces();
+
             Container = builder.Build() ;            
         }
     }

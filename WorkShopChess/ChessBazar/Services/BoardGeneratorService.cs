@@ -22,9 +22,9 @@ namespace ChessBazar.Services
                 for (int col = 0; col < BoardCols; col++)
                 {
                     Square square = null;
-                    ChessFigure figure = new Empty(row, col, "");
-
-                    if((row + col) % 2 == 0)
+                    var figure = this.GetFigure(row, col);  
+                    
+                    if ((row + col) % 2 == 0)
                     {
                         square = new Square(row, col, true, figure);
                     }
@@ -38,6 +38,38 @@ namespace ChessBazar.Services
             }
 
             return board;
+        }
+
+        private ChessFigure GetFigure(int row, int col)
+        {
+            ChessFigure figure = new Empty(row, col, "");
+
+            if(row == 0)
+            {
+                if(col == 1 || col == 6)
+                {
+                    figure = new Knight(row, col, false, "/Images/blackknight.png");
+                }
+            }
+
+            if (row == 7)
+            {
+                if (col == 1 || col == 6)
+                {
+                    figure = new Knight(row, col, true, "/Images/whiteknight.png");
+                }
+            }
+
+            if (row == 1)
+            {
+                figure = new Pawn(row, col, false, "/Images/blackpawn.png");
+            }
+            if (row == 6)
+            {
+                figure = new Pawn(row, col, true, "/Images/whitepawn.png");
+            }
+
+            return figure;
         }
     }
 }

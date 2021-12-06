@@ -21,5 +21,10 @@ namespace ChessBazar.Data
         public bool IsWhite { get; set; }
 
         public string Image { get; set; }
+
+        public override string ToString()
+        {
+            return $"{this.Name} + {this.Row} {this.Col}";
+        }
     }
 }
