@@ -90,6 +90,8 @@
     </Compile>
     <Compile Include="RelayCommand.cs" />
     <Compile Include="Services\BoardGeneratorService.cs" />
+    <Compile Include="Services\ChessRulesService.cs" />
+    <Compile Include="Services\Contracts\IChessRulesService.cs" />
     <Compile Include="Services\Contracts\IBoardGeneratorService.cs" />
     <Compile Include="ViewModels\BaseNotifyPropertyChanged.cs" />
     <Compile Include="ViewModels\ChessGridViewModel.cs" />

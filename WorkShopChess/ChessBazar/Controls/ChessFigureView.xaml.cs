@@ -66,7 +66,8 @@ namespace ChessBazar.Controls
             DependencyProperty.Register(
                 "Figure",
                 typeof(ChessFigure),
-                typeof(ChessFigureView));
+                typeof(ChessFigureView),
+                new FrameworkPropertyMetadata(null));
 
         public ChessFigure Figure
         {

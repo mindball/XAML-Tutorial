@@ -14,13 +14,20 @@ namespace ChessBazar.ViewModels
     public class ChessGridViewModel     
     {
         private readonly IBoardGeneratorService generator;
+        private readonly IChessRulesService ruleService;
+
+
         private ICommand initCommand;
         private ICommand dragInitCommand;
         private ICommand dragPushCommand;
 
-        public ChessGridViewModel(IBoardGeneratorService generator)
+        private ChessFigure selectedFigure;
+        private Square[,] board;
+
+        public ChessGridViewModel(IBoardGeneratorService generator, IChessRulesService ruleService)
         {
             this.generator = generator;
+            this.ruleService = ruleService;
 
             this.Squares = new ObservableCollection<Square>();
         }
@@ -71,7 +78,7 @@ namespace ChessBazar.ViewModels
 
         public void Init()
         {
-            var board = this.generator.Generate();
+            this.board = this.generator.Generate();
             foreach (var square in board)
             {
                 Squares.Add(square);
@@ -80,19 +87,46 @@ namespace ChessBazar.ViewModels
 
         public void DragInit(ChessFigure figure)
         {
-            Task.Run(() =>
-            {
-                MessageBox.Show(figure.ToString());
-            });
+            selectedFigure = figure;
+            //Task.Run(() =>
+            //{
+            //    MessageBox.Show(figure.ToString());
+            //});
         }
 
         public void DragPush(ChessFigure figure)
         {
-
-            Task.Run(() =>
+            dynamic dynamicCurrentFigure = this.selectedFigure;
+            if (!this.ruleService.Check(this.board, dynamicCurrentFigure, figure))
             {
-                MessageBox.Show(figure.ToString());
-            });
+
+            }
+
+            var selectedSquare = this.board[this.selectedFigure.Row, this.selectedFigure.Col];
+            var destinationSqure = this.board[figure.Row, figure.Col];
+
+            var selectedSquareIndex = Squares.IndexOf(selectedSquare);
+            var destinationSquareIndex = Squares.IndexOf(destinationSqure);
+
+            var emptyFigure = new Empty(
+                selectedSquare.Row,
+                selectedSquare.Col,
+                "");
+
+            var cleanSquareFromFigure = 
+                new Square(selectedSquare.Row, selectedSquare.Col, selectedSquare.IsWhite, emptyFigure);
+            Squares[selectedSquareIndex] = cleanSquareFromFigure;           
+
+            var newSquareWithFigure = 
+                new Square(destinationSqure.Row, destinationSqure.Col, destinationSqure.IsWhite, this.selectedFigure);
+            Squares[destinationSquareIndex] = newSquareWithFigure;
+
+            this.board[selectedSquare.Row, selectedSquare.Col] = cleanSquareFromFigure;
+            this.board[destinationSqure.Row, destinationSqure.Col] = newSquareWithFigure;
+            //Task.Run(() =>
+            //{
+            //    MessageBox.Show(figure.ToString());
+            //});
         }
     }
 }
