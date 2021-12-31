@@ -1,0 +1,31 @@
+﻿<Window x:Class="Layouts.Panels.Wrappanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Layouts.Panels"
+        mc:Ignorable="d"
+        Title="Wrappanel" Height="450" Width="800">
+    <WrapPanel Orientation="Vertical">
+        <Rectangle Width="50" Height="50" Fill="LightBlue"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="GreenYellow"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Brown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="RosyBrown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Blue"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="LightBlue"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="GreenYellow"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Brown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="RosyBrown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Blue"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="LightBlue"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="GreenYellow"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Brown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="RosyBrown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Blue"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="LightBlue"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="GreenYellow"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Brown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="RosyBrown"></Rectangle>
+        <Rectangle Width="50" Height="50" Fill="Blue"></Rectangle>
+    </WrapPanel>
+</Window>
