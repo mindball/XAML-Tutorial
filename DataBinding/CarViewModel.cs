@@ -13,7 +13,7 @@ namespace DataBinding
         private string manufacture;
         private string model;
         private decimal yearOfDrived;
-        private DateTime created;
+        private string created;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -22,7 +22,7 @@ namespace DataBinding
             this.Manufacture = "audi";
             this.Model = "S8";
             this.YearsOfDrived = 1232222;
-            this.Created = DateTime.Now;
+            this.Created = "12***11***2021";
         }
 
         public string Manufacture
@@ -66,7 +66,7 @@ namespace DataBinding
 
         }
 
-        public DateTime Created
+        public string Created
         {
             get
             {

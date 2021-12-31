@@ -26,6 +26,13 @@ this.DataContext = car;
 Label>Model</Label>
 <TextBox Text="{Binding Model}" />
 ```
+## DataContext
+```
+The DataContext property is the default source of your bindings unless you specifically declare another source, 
+like we did in the previous chapter with the ElementName property. There's no default source for the DataContext property 
+(it's simply null from the start), but since a DataContext is inherited down through the control hierarchy, 
+you can set a DataContext for the Window itself and then use it throughout all of the child controls.
+```
 ## Target
 ```
 Пример TextBox.Text

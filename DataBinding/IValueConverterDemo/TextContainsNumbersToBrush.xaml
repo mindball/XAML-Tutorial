@@ -8,17 +8,16 @@
         Title="TextContainsNumbersToBrush" Height="450" Width="800">
     <Window.Resources>
         <local:TextContainsNumbersToBrushConverter 
-        x:Key="TextToBrushConverter" 
+        x:Key="TextContainsNumbersToBrushConverter" 
         NormalBrush="Black"
         HighlightBrush="Red"/>
     </Window.Resources>    
     <StackPanel>
-        <TextBox Text="{Binding Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-           Foreground="{Binding Path=Text, Converter={StaticResource TextToBrushConverter}}" 
+        <TextBox x:Name="Source" Text="{Binding Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+           Foreground="{Binding Path=Text, Converter={StaticResource TextContainsNumbersToBrushConverter}}" 
                  FontSize="32"
                  Width="200"
                  VerticalAlignment="Center"
-                 />
-        <TextBox></TextBox>
+                 />       
     </StackPanel>
 </Window>

@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Controls.Models;
+using Microsoft.Win32;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +26,22 @@ namespace Controls
         public GroupBoxDemo()
         {
             InitializeComponent();
+        }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+            TShirt model = new TShirt();
+            model.Model = Model.Text.ToString();
+            model.Manufacturer = Manufacture.Text.ToString();
+            model.IsDirty = Dirty.IsChecked;
+            model.Size = Size.Text.ToString();
+
+            var jsonResult = JsonConvert.SerializeObject(model);
+
+            using (StreamWriter writer = new StreamWriter("database.json"))
+            {
+                writer.Write(jsonResult);
+            }
         }
     }
 }

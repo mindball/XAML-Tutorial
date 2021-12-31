@@ -20,7 +20,7 @@ namespace DataBinding.IValueConverterDemo
     public partial class TextContainsNumbersToBrush : Window
     {
         public TextContainsNumbersToBrush()
-        {
+        {            
             InitializeComponent();
         }
     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Controls"
         mc:Ignorable="d"
-        Title="GroupBoxDemo" Width="800">
+        Title="GroupBoxDemo" Width="518" Height="276">
     <StackPanel>
         <GroupBox Header="T-Shirt">
             <StackPanel>
@@ -15,7 +15,7 @@
                         <ColumnDefinition Width="5*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label>Manufacture</Label>
-                    <TextBox Grid.Column="1" x:Name="Manufacture">Tom Tawlor</TextBox>
+                    <TextBox Grid.Column="1" x:Name="Manufacture" Margin="0,0,42,0">Tom Tawlor</TextBox>
                 </Grid>
                 <Grid Margin="10 5">
                     <Grid.ColumnDefinitions>
@@ -23,9 +23,25 @@
                         <ColumnDefinition Width="5*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label>Model</Label>
-                    <TextBox Grid.Column="1" x:Name="Model">HMs</TextBox>
+                    <TextBox Grid.Column="1" x:Name="Model" HorizontalAlignment="Left" Width="364">HMs</TextBox>
                 </Grid>
-                <Button Height="20" Width="50">Save</Button>
+                <Grid Margin="10 5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label>Dirty</Label>
+                    <CheckBox Grid.Column="1" IsChecked="True"  x:Name="Dirty">Dirty</CheckBox>
+                </Grid>
+                <Grid Margin="10 5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label>Size</Label>
+                    <TextBox Grid.Column="1" x:Name="Size" HorizontalAlignment="Left" Width="364">XXL</TextBox>
+                </Grid>
+                <Button Click="Save" Height="20" Width="50" Content="Save"/>
             </StackPanel>
         </GroupBox>
     </StackPanel>

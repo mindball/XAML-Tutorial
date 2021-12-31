@@ -10,9 +10,25 @@ namespace DataBinding.Validations
 {
     public class UserNameValidationRule : ValidationRule
     {
-        public int MinLegth => 4;
+        private int minLength;
+        private int maxLength;
+        public int MinLegth 
+        {
+            get => 2;
+            set
+            {
+                this.minLength = value;
+            }
+        }
 
-        public int MaxLegth => 20;
+        public int MaxLegth
+        {
+            get => 20;
+            set
+            {
+                this.maxLength = value;
+            }
+        }
 
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

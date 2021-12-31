@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataTriggersDemo\DataTriggersWPF.xaml.cs">
+      <DependentUpon>DataTriggersWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventTrigersDemo\EventTriggersWPF.xaml.cs">
+      <DependentUpon>EventTriggersWPF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TriggersDemo\TriggersWPF.xaml.cs">
       <DependentUpon>TriggersWPF.xaml</DependentUpon>
     </Compile>
@@ -62,7 +68,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DataTriggersDemo\DataTriggersWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventTrigersDemo\EventTriggersWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
