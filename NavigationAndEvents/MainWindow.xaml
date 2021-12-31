@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center">
+            <Button Click="PageExaples">Page exaples</Button>
+            <Button Click="EventAndDeleageExaples">Event and delagate exaples</Button>
+        </StackPanel>
     </Grid>
 </Window>

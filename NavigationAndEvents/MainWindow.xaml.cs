@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NavigationAndEvents.EventsAndDelegate;
+using NavigationAndEvents.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +21,23 @@ namespace NavigationAndEvents
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    { 
         public MainWindow()
         {
             InitializeComponent();
+           
+        }
+
+        private void PageExaples(object sender, RoutedEventArgs e)
+        {
+            PagesExample wnd = new PagesExample();  
+            wnd.Show(); 
+        }
+
+        private void EventAndDeleageExaples(object sender, RoutedEventArgs e)
+        {
+            EventsAndDelegates wnd = new EventsAndDelegates();
+            wnd.Show();
         }
     }
 }
