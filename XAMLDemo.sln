@@ -35,6 +35,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutedEventArgsExample", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationAndEvents", "NavigationAndEvents\NavigationAndEvents.csproj", "{F4F2163D-E7C1-4749-9FEF-CB2F6010624E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsCommandDemo", "WindowsCommandDemo\WindowsCommandDemo.csproj", "{D776DEE7-377E-4F8F-A361-1DB3DE9E765C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlsExample", "UserControlsExample\UserControlsExample.csproj", "{B0C29300-D7AA-4C7F-888E-AAE4F57DB3FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependancyPropertiesTutorial", "DependancyPropertiesTutorial\DependancyPropertiesTutorial.csproj", "{6E930C06-3185-4578-9A9D-07F19E849BB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingMicrosoftAppStoreCloneUsingMahApps", "BuildingMicrosoftAppStoreCloneUsingMahApps", "{79AA136B-1EF8-422D-91D9-4A46D49E5C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF MC", "WPF MC\WPF MC.csproj", "{8899AE07-AFB2-4D5C-8256-9C8B008012E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +107,22 @@ Global
 		{F4F2163D-E7C1-4749-9FEF-CB2F6010624E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4F2163D-E7C1-4749-9FEF-CB2F6010624E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4F2163D-E7C1-4749-9FEF-CB2F6010624E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D776DEE7-377E-4F8F-A361-1DB3DE9E765C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D776DEE7-377E-4F8F-A361-1DB3DE9E765C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D776DEE7-377E-4F8F-A361-1DB3DE9E765C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D776DEE7-377E-4F8F-A361-1DB3DE9E765C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C29300-D7AA-4C7F-888E-AAE4F57DB3FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C29300-D7AA-4C7F-888E-AAE4F57DB3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C29300-D7AA-4C7F-888E-AAE4F57DB3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C29300-D7AA-4C7F-888E-AAE4F57DB3FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E930C06-3185-4578-9A9D-07F19E849BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E930C06-3185-4578-9A9D-07F19E849BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E930C06-3185-4578-9A9D-07F19E849BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E930C06-3185-4578-9A9D-07F19E849BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8899AE07-AFB2-4D5C-8256-9C8B008012E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8899AE07-AFB2-4D5C-8256-9C8B008012E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8899AE07-AFB2-4D5C-8256-9C8B008012E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8899AE07-AFB2-4D5C-8256-9C8B008012E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +133,7 @@ Global
 		{E9299367-FBE9-4FEB-A4D8-274003D7E4E6} = {24F71648-D8B4-4E27-AAD3-24921F2B23C1}
 		{DEC76E78-457B-4B6A-8925-C2C30A57D4F7} = {746BB424-F73F-4C64-82BE-BF77BA7944B7}
 		{18C9C981-AE67-412A-9F76-90F7DBCF3111} = {746BB424-F73F-4C64-82BE-BF77BA7944B7}
+		{8899AE07-AFB2-4D5C-8256-9C8B008012E5} = {79AA136B-1EF8-422D-91D9-4A46D49E5C86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8F5474B-2F97-4365-94CE-271094152706}
