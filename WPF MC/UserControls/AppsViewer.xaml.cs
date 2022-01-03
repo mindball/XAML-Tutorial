@@ -54,5 +54,28 @@ namespace WPF_MC.UserControls
             int widthOfOneApp = (int)PresentedApps.First().ActualWidth + 2 * (int)PresentedApps.First().Margin.Left;
             AppScrollViewer.ScrollToHorizontalOffset(AppScrollViewer.HorizontalOffset + 4 * widthOfOneApp);
         }
+
+        private void AppScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            e.Handled = true;
+            var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
+            eventArg.RoutedEvent = UIElement.MouseWheelEvent;
+            //the same
+            //eventArg.Source = sender;
+            eventArg.Source = this;
+            var parent = ((Control)sender).Parent as UIElement;
+            parent.RaiseEvent(eventArg);
+
+            //The same
+            //if (!e.Handled)
+            //{
+            //    e.Handled = true;
+            //    var e2 = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta) { RoutedEvent = UIElement.MouseWheelEvent };
+
+            //    var parent = ((Control)sender).Parent as UIElement;
+            //    parent.RaiseEvent(e2);
+
+            //}
+        }
     }
 }
