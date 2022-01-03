@@ -12,25 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_MC.Pages;
 
-namespace WPF_MC
+namespace WPF_MC.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        private Main MainWindowsContentPage;
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            MainWindowsContentPage = new Main();
-        }
-
-        private void MainWindowFrame_Loaded(object sender, RoutedEventArgs e)
-        {
-            MainWindowFrame.Content = MainWindowsContentPage;
         }
     }
 }

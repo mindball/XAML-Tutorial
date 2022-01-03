@@ -12,25 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_MC.Pages;
 
-namespace WPF_MC
+namespace WPF_MC.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TopApps.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TopApps : UserControl
     {
-        private Main MainWindowsContentPage;
-        public MainWindow()
+        public TopApps()
         {
             InitializeComponent();
-            MainWindowsContentPage = new Main();
         }
 
-        private void MainWindowFrame_Loaded(object sender, RoutedEventArgs e)
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            MainWindowFrame.Content = MainWindowsContentPage;
+
         }
     }
 }
