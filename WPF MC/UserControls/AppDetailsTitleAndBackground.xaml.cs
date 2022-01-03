@@ -16,19 +16,21 @@ using System.Windows.Shapes;
 namespace WPF_MC.UserControls
 {
     /// <summary>
-    /// Interaction logic for ProductivityToApps.xaml
+    /// Interaction logic for AppDetailsTitleAndBackground.xaml
     /// </summary>
-    public partial class ProductivityToApps : UserControl
-    {    
-        public ProductivityToApps()
+    public partial class AppDetailsTitleAndBackground : UserControl
+    {
+        public delegate void OnBackMainButtonPressed(AppDetailsTitleAndBackground sender, RoutedEventArgs e);
+        public event OnBackMainButtonPressed BackMainButtonPressed;   
+
+        public AppDetailsTitleAndBackground()
         {
             InitializeComponent();
         }
-            
 
-        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        private void Back_Btn(object sender, RoutedEventArgs e)
         {
-
+            BackMainButtonPressed(this, e);
         }
     }
 }

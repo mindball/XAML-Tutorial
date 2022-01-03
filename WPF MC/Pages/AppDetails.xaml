@@ -1,0 +1,58 @@
+﻿<Page x:Class="WPF_MC.Pages.AppDetails"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_MC.Pages"
+      xmlns:uc="clr-namespace:WPF_MC.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AppDetails"
+      Name="AppDetailsPages">
+
+    <ScrollViewer Name="AppDetailsSV"
+                  HorizontalScrollBarVisibility="Hidden"
+                  VerticalScrollBarVisibility="Hidden"
+                  Background="#2E2E2E"
+    >
+
+        <StackPanel Name="AppDetailsPageMainStackPanel"
+                    Orientation="Vertical"
+                    Width="{Binding ElementName=AppDetailsSV, Path=ActualWidth}"
+                    Background="#2E2E2E"
+                    Margin="0,0,0,15">
+            <uc:AppDetailsTitleAndBackground x:Name="AppDetailsTitleAndBackgroundUC"/>
+
+            <Grid Name="Tabs">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.70*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--TODO: Step 5: Add a tab control -->
+                <TabControl 
+                    Name="AppDetailsTabControl"
+                    Grid.Column="1" 
+                    HorizontalAlignment="Stretch"
+                >
+                    <!--TODO: Step 6: Add the tabs below 
+                    For now they're going to be empty 
+                    GOTO: MainWindow.xaml.cs to display this page -->
+                    <TabItem Header="Owerview">
+
+                    </TabItem>
+                    <TabItem Header="System Requirements">
+
+                    </TabItem>
+                    <TabItem Header="Reviews">
+                    </TabItem>
+                    <TabItem Header="Related">
+
+                    </TabItem>
+                </TabControl>
+            </Grid>
+
+        </StackPanel>
+         
+    </ScrollViewer>
+</Page>

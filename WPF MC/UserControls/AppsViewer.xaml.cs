@@ -21,6 +21,10 @@ namespace WPF_MC.UserControls
     public partial class AppsViewer : UserControl
     {
         private List<AnApp> PresentedApps;
+
+        public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
+        public event OnAppClicked AppClicked;
+
         public AppsViewer()
         {
             InitializeComponent();
@@ -31,9 +35,12 @@ namespace WPF_MC.UserControls
             for (int i = 0; i < 9; i++)
             {
                 var anApp = new AnApp();
+                anApp.AppClicked += Curr_AppClicked;
                 PresentedApps.Add(anApp);
             }
-        }
+
+
+        }      
 
         private void ScrollLeftButton_Click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +83,11 @@ namespace WPF_MC.UserControls
             //    parent.RaiseEvent(e2);
 
             //}
+        }
+
+        private void Curr_AppClicked(AnApp sender, RoutedEventArgs e)
+        {
+            AppClicked(sender, e);
         }
     }
 }

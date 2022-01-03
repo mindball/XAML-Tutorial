@@ -24,8 +24,10 @@ namespace WPF_MC.UserControls
     public partial class AnApp : UserControl
     {
         public string AppName;
-
         public ImageSource AppImageSource;
+
+        public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
+        public event OnAppClicked AppClicked;
 
         public AnApp()
         {
@@ -41,7 +43,7 @@ namespace WPF_MC.UserControls
 
         private void ProductImage_MouseUp(object sender, MouseButtonEventArgs e)
         {
-
+            AppClicked(this, e);
         }
     }
 }

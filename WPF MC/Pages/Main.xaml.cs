@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_MC.UserControls;
 
 namespace WPF_MC.Pages
 {
@@ -20,9 +21,22 @@ namespace WPF_MC.Pages
     /// </summary>
     public partial class Main : Page
     {
+        public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
+        public event OnAppClicked AppClicked;
+
         public Main()
         {
             InitializeComponent();
+            FeaturesAppsViewer.AppClicked += AnAppClicked;
+            MostPopularAppsViewer.AppClicked += AnAppClicked;
+            TopFreeAppsViewer.AppClicked += AnAppClicked;
+            TopFreeGamesAppsViewer.AppClicked += AnAppClicked;
+
+        }
+
+        private void AnAppClicked(AnApp sender, RoutedEventArgs e)
+        {
+            AppClicked(sender, e);
         }
     }
 }
