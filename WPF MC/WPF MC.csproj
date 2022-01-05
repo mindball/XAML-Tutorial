@@ -70,6 +70,15 @@
     <Compile Include="UserControls\AppDetailsTitleAndBackground.xaml.cs">
       <DependentUpon>AppDetailsTitleAndBackground.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AppDetailTabContent\Areview.xaml.cs">
+      <DependentUpon>Areview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppDetailTabContent\Overview.xaml.cs">
+      <DependentUpon>Overview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppDetailTabContent\Related.xaml.cs">
+      <DependentUpon>Related.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AppsViewer.xaml.cs">
       <DependentUpon>AppsViewer.xaml</DependentUpon>
     </Compile>
@@ -101,23 +110,35 @@
     </Page>
     <Page Include="UserControls\AnApp.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="UserControls\AppDetailsTitleAndBackground.xaml">
       <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="UserControls\AppDetailTabContent\Areview.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppDetailTabContent\Overview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppDetailTabContent\Related.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\AppsViewer.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="UserControls\ProductivityToApps.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="UserControls\TopApps.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

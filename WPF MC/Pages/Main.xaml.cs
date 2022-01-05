@@ -32,6 +32,14 @@ namespace WPF_MC.Pages
             TopFreeAppsViewer.AppClicked += AnAppClicked;
             TopFreeGamesAppsViewer.AppClicked += AnAppClicked;
 
+            GamingAppsViewer.AppClicked += AnAppClicked;
+            EntertainmentAppsViewer.AppClicked += AnAppClicked;
+
+            ProductivityAppsL1.AppClicked += AnAppClicked;
+            ProductivityAppsL2.AppClicked += AnAppClicked;
+            ProductivityAppsL3.AppClicked += AnAppClicked;
+
+            DealsAppsViewer.AppClicked += AnAppClicked;
         }
 
         private void AnAppClicked(AnApp sender, RoutedEventArgs e)

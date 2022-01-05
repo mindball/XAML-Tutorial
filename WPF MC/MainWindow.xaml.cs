@@ -36,6 +36,7 @@ namespace WPF_MC
         private void MainWindowContentPage_AppClicked(AnApp sender, RoutedEventArgs e)
         {
             AppDetailsContentPage = new AppDetails(sender);
+            AppDetailsContentPage.AppClicked += MainWindowContentPage_AppClicked;
             AppDetailsContentPage.BackMainButtonPressed += MyAppDetails_BackButtonClicked;
             MainWindowFrame.Content = AppDetailsContentPage;
         }

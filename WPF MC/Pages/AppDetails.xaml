@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPF_MC.Pages"
       xmlns:uc="clr-namespace:WPF_MC.UserControls"
+       xmlns:ucappdet="clr-namespace:WPF_MC.UserControls.AppDetailTabContent"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AppDetails"
@@ -39,8 +40,9 @@
                     For now they're going to be empty 
                     GOTO: MainWindow.xaml.cs to display this page -->
                     <TabItem Header="Owerview">
-
+                        <ucappdet:Overview x:Name="OverviewTabUC" />
                     </TabItem>
+                    
                     <TabItem Header="System Requirements">
 
                     </TabItem>

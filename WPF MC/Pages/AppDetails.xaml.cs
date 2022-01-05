@@ -24,6 +24,9 @@ namespace WPF_MC.Pages
         public delegate void OnBackMainButtonPressed(AppDetailsTitleAndBackground sender, RoutedEventArgs e);
         public event OnBackMainButtonPressed BackMainButtonPressed;
 
+        public delegate void OnAppDetailsAnotherAppClicked(AnApp sender, RoutedEventArgs e);
+        public event OnAppDetailsAnotherAppClicked AppClicked;
+
         public AppDetails(AnApp appDetail)
         {
             InitializeComponent();
@@ -32,11 +35,18 @@ namespace WPF_MC.Pages
             AppDetailsTitleAndBackgroundUC.AppImage.Source = appDetail.AppImageSource;
 
             AppDetailsTitleAndBackgroundUC.BackMainButtonPressed += AppDetailsTitleAndBackgroundUC_BackButtonClicked;
+
+            OverviewTabUC.AppClicked += OverviewTabUC_AppClicked;
         }
 
         private void AppDetailsTitleAndBackgroundUC_BackButtonClicked(AppDetailsTitleAndBackground sender, RoutedEventArgs e)
         {
             BackMainButtonPressed(sender, e);
+        }
+
+        private void OverviewTabUC_AppClicked(AnApp sender, RoutedEventArgs e)
+        {
+            AppClicked(sender, e);
         }
     }
 }
